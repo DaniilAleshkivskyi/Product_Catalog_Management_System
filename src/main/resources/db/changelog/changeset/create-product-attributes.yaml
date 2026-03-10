@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-product-attributes
+      author: Daniil-Aleshkivskyi
+      changes:
+        - createTable:
+            tableName: product_attribute
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: value
+                  type: varchar(1000)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_attribute_product
+                    references: product(id)

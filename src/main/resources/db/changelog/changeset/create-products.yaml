@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-products
+      author: Daniil-Aleshkivskyi
+      changes:
+        - createTable:
+            tableName: product
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: producer_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_product_producer
+                    references: producer(id)
