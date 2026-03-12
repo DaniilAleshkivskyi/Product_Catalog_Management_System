@@ -17,7 +17,7 @@ public class ProducerService {
         this.producerRepository = producerRepository;
     }
 
-    public List<Producer> getAllProducer() {
+    public List<Producer> getAllProducers() {
         return producerRepository.findAll();
     }
 

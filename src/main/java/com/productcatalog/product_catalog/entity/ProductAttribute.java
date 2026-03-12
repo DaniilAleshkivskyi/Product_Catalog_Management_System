@@ -13,7 +13,8 @@ public class ProductAttribute {
 
     private String name;
 
-    private String value;
+    @Column(name = "attribute_value")
+    private String attributeValue;
 
     @ManyToOne
     @JoinColumn(name = "product_id")
@@ -32,11 +33,11 @@ public class ProductAttribute {
     public String getName() {
         return name;
     }
-    public void setValue(String value) {
-        this.value = value;
+    public void setAttributeValue(String attributeValue) {
+        this.attributeValue = attributeValue;
     }
-    public String getValue() {
-        return value;
+    public String getAttributeValue() {
+        return attributeValue;
     }
     public void setProduct(Product product) {
         this.product = product;

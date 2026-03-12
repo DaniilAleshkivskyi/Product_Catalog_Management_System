@@ -30,3 +30,13 @@ databaseChangeLog:
                     nullable: false
                     foreignKeyName: fk_attribute_product
                     references: product(id)
+
+
+  - changeSet:
+      id: rename-value-column
+      author: Daniil-Aleshkivskyi
+      changes:
+        - renameColumn:
+            tableName: product_attribute
+            oldColumnName: value
+            newColumnName: attribute_value

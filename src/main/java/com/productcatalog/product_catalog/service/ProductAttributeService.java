@@ -25,7 +25,7 @@ public class ProductAttributeService {
     public ProductAttribute updateProductAttribute(Long id, ProductAttribute productAttribute) {
         ProductAttribute existing = productAttributeRepository.findById(id).orElseThrow(() -> new RuntimeException("ProductAttribute with id:" + id+ " was not found"));
         existing.setName(productAttribute.getName());
-        existing.setValue(productAttribute.getValue());
+        existing.setAttributeValue(productAttribute.getAttributeValue());
         return productAttributeRepository.save(existing);
     }
 

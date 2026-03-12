@@ -1,0 +1,9 @@
+2026-03-12 12:32:38.876740+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOGLOCK" not found; SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK [42102-232]
+2026-03-12 13:29:38.139064+01:00 jdbc[18]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into product_attribute (name,product_id,[*]value,id) values (?,?,?,default)"; expected "identifier"; SQL statement:
+insert into product_attribute (name,product_id,value,id) values (?,?,?,default) [42001-232]
+2026-03-12 13:30:35.934047+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into product_attribute (name,product_id,[*]value,id) values (?,?,?,default)"; expected "identifier"; SQL statement:
+insert into product_attribute (name,product_id,value,id) values (?,?,?,default) [42001-232]
