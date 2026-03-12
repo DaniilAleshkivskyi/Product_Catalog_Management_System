@@ -21,6 +21,8 @@ target/
 
 .DS_Store
 
+data/
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
