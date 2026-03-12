@@ -2,9 +2,7 @@ package com.productcatalog.product_catalog.controller;
 
 
 import com.productcatalog.product_catalog.entity.Producer;
-import com.productcatalog.product_catalog.entity.Product;
 import com.productcatalog.product_catalog.service.ProducerService;
-import com.productcatalog.product_catalog.service.ProductService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

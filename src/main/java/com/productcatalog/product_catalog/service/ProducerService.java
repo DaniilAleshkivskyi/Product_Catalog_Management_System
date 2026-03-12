@@ -1,9 +1,7 @@
 package com.productcatalog.product_catalog.service;
 
 import com.productcatalog.product_catalog.entity.Producer;
-import com.productcatalog.product_catalog.entity.Product;
 import com.productcatalog.product_catalog.repository.ProducerRepository;
-import com.productcatalog.product_catalog.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
