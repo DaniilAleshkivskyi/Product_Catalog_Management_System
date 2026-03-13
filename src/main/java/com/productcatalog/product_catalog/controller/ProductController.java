@@ -36,4 +36,9 @@ public class ProductController {
     public void deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
     }
+
+    @GetMapping("/by-producer/{producerId}")
+    public List<Product> getProductsByProducer(@PathVariable Long producerId) {
+        return productService.getProductsByProducerId(producerId);
+    }
 }
