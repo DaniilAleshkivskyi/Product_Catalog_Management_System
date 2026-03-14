@@ -36,4 +36,8 @@ public class ProductService {
     public List<Product> getProductsByProducerId(Long producerId) {
         return productRepository.findByProducerId(producerId);
     }
+
+    public Product getProductById(Long id) {
+        return productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product with id:" + id+ " was not found"));
+    }
 }

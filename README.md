@@ -28,6 +28,8 @@
 
 #### Products
 - `GET http://localhost:8080/api/products` - get all products
+- `GET http://localhost:8080/api/products/{id}` - get product by id
+- `GET http://localhost:8080/api/products/by-producer/{producerId}` - get products, with filtering by producer id 
 - `POST http://localhost:8080/api/products` - create product
 - `PUT http://localhost:8080/api/products/{id}` - update product
 - `DELETE http://localhost:8080/api/products/{id}` - delete product
@@ -37,7 +39,6 @@
 - `POST http://localhost:8080/api/product-attributes` - create attribute
 - `PUT http://localhost:8080/api/product-attributes/{id}` - update attribute
 - `DELETE http://localhost:8080/api/product-attributes/{id}` - delete attribute
-- 
 #### Example requests
 Create producer:
 POST /api/producers
@@ -75,7 +76,8 @@ POST /api/product-attributes
 
 #### Products
 - GET `curl http://localhost:8080/api/products`
-- GET with id filtering `curl http://localhost:8080/api/products/by-producer/{producerId}`
+- GET product by id `curl http://localhost:8080/api/products/{id}`
+- GET products, with filtering by producer id `curl http://localhost:8080/api/products/by-producer/{producerId}`
 - POST `curl -X POST http://localhost:8080/api/products -H "Content-Type: application/json" -d '{"producer": {"id": 1}}'`
 - PUT `curl -X PUT http://localhost:8080/api/products/{id} -H "Content-Type: application/json" -d '{"producer": {"id": 2}}'`
 - DELETE `curl -X DELETE http://localhost:8080/api/products/{id}`
@@ -93,8 +95,8 @@ The project uses H2 file-based database.
 Data is stored locally in the `/data` folder and persists between restarts.
 
 ## Additional implementations
- - Searching products by id, Request: `GET http://localhost:8080/api/products/by-producer/{id}`
-
+- Searching products by id, Request: `GET http://localhost:8080/api/products/by-producer/{id}`
+- Filtering products by producer: `GET http://localhost:8080/api/products/by-producer/{producerId}`
 ## Tech Stack
 - Java 21
 - Spring Boot 3.5.11
