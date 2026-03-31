@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-analytics-columns
+      author: Daniil-Aleshkivskyi
+      changes:
+        - addColumn:
+            tableName: producer
+            columns:
+              - column:
+                  name: created_at
+                  type: timestamp
+        - addColumn:
+            tableName: product
+            columns:
+              - column:
+                  name: price
+                  type: decimal(19,2)
+              - column:
+                  name: created_at
+                  type: timestamp
